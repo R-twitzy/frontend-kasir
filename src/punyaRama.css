@@ -1,0 +1,32 @@
+.bg-biru{
+    background-color: #F5F9FF;
+}
+
+.card-rama{
+    box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    background-color: white !important;
+}
+
+.tombol-biru{
+    background: #006AFF;
+    border-radius: 10px;
+    color: white !important;
+    font-weight: 600;
+    line-height: 24px;
+    border: none;
+    padding: 5px 16px;
+    font-size: small;
+}
+
+.form-biru{
+    background: #BFDAFF;
+    border-radius: 15px;
+    border:none;
+    padding: 5px 15px;
+    color: rgb(14, 22, 161);
+}
+
+input:focus {
+    border: none;
+  }

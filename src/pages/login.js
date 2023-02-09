@@ -42,53 +42,43 @@ export default function Login() {
       });
   };
   return (
-    <div
-      style={{
-        background: `#F5F9FF`,
-        height: "100vh",
-        width: "100%",
-      }}
-    >
-      <div className="container">
-        <div className="row justify-content-center mt-5">
-          <div className="card mt-5 col-12 col-md-9 col-lg-7 col-xl-6">
-            <div className="card-body pt-3 pb-3">
-              <form onSubmit={(ev) => loginProcess(ev)}>
-                {/* User Name Input */}
-                <div className="form-group row justify-content-center px-3 my-2">
-                  <h6>Username</h6>
-                  <input
-                    type="text"
-                    placeholder="username"
-                    className="form-control"
-                    required
-                    value={username}
-                    onChange={(ev) => setUsername(ev.target.value)}
-                  />
-                </div>
-                {/* Password Input */}
-                <div className="form-group row justify-content-center px-3 my-2">
-                  <h6>Password</h6>
-                  <input
-                    type="password"
-                    placeholder="●●●●●●●●"
-                    className="form-control"
-                    required
-                    value={password}
-                    onChange={(ev) => setPassword(ev.target.value)}
-                  />
-                </div>
-                {/* Log in Button */}
-                <div className="row justify-content-center">
-                  <button
-                    type="submit"
-                    className="col-8 btn btn-success mt-3 mb-2"
-                  >
-                    Sign In
-                  </button>
-                </div>
-              </form>
-            </div>
+    <div className="container">
+      <div className="row justify-content-center mt-5">
+        <div className=" mt-5 col-12 col-md-9 col-lg-7 col-xl-6 card-rama">
+          <div className="card-body p-3">
+            <form onSubmit={(ev) => loginProcess(ev)}>
+              {/* User Name Input */}
+              <div className="form-group row justify-content-center px-3 my-2">
+                <h6>Username</h6>
+                <input
+                  type="text"
+                  className="form-biru"
+                  required
+                  value={username}
+                  onChange={(ev) => setUsername(ev.target.value)}
+                />
+              </div>
+              {/* Password Input */}
+              <div className="row justify-content-center px-3 my-2">
+                <h6>Password</h6>
+                <input
+                  type="password"
+                  className="form-biru"
+                  required
+                  value={password}
+                  onChange={(ev) => setPassword(ev.target.value)}
+                />
+              </div>
+              {/* Log in Button */}
+              <div className="">
+                <button
+                  type="submit"
+                  className="tombol-biru my-3"
+                >
+                  Sign in
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
