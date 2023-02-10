@@ -32,7 +32,7 @@ export default function Login() {
           let dataUser = JSON.stringify(response.data.dataUser);
           localStorage.setItem(`user-pelanggaran`, dataUser);
           alert(`Login Berhhasil`);
-          window.location.href = "/";
+          window.location.href = `/${response.data.dataUser.role}`;
         } else {
           alert(`invalid username or password`);
         }
@@ -42,39 +42,34 @@ export default function Login() {
       });
   };
   return (
-    <div className="container">
+    <div className="container-fluid tengah">
       <div className="row justify-content-center mt-5">
-        <div className=" mt-5 col-12 col-md-9 col-lg-7 col-xl-6 card-rama">
+        <div className="col-10 col-md-8 col-lg-6 col-xl-4 card-rama mb-5">
           <div className="card-body p-3">
             <form onSubmit={(ev) => loginProcess(ev)}>
-              {/* User Name Input */}
-              <div className="form-group row justify-content-center px-3 my-2">
-                <h6>Username</h6>
+              <div className=" px-2 py-3">
+                <h3 className="fw-bold">Login</h3>
+                <h6 className="mb-4">Enter your username and password</h6>
+                {/* User Name Input */}
+                <b>Username</b>
                 <input
                   type="text"
-                  className="form-biru"
+                  className="form-control form-biru my-2 col-12"
                   required
                   value={username}
                   onChange={(ev) => setUsername(ev.target.value)}
                 />
-              </div>
-              {/* Password Input */}
-              <div className="row justify-content-center px-3 my-2">
-                <h6>Password</h6>
+                {/* password input */}
+                <b>Password</b>
                 <input
                   type="password"
-                  className="form-biru"
+                  className="form-control form-biru my-2 col-12"
                   required
                   value={password}
                   onChange={(ev) => setPassword(ev.target.value)}
                 />
-              </div>
-              {/* Log in Button */}
-              <div className="">
-                <button
-                  type="submit"
-                  className="tombol-biru my-3"
-                >
+                {/* button login */}
+                <button type="submit" className="tombol-biru mt-3">
                   Sign in
                 </button>
               </div>

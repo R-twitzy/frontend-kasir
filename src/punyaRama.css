@@ -17,6 +17,7 @@
     border: none;
     padding: 5px 16px;
     font-size: small;
+    text-decoration-line: none;
 }
 
 .form-biru{
@@ -27,6 +28,9 @@
     color: rgb(14, 22, 161);
 }
 
-input:focus {
-    border: none;
-  }
+.tengah{
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
