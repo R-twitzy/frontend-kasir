@@ -28,9 +28,9 @@ export default function Login() {
         if (response.data.logged === true) {
           let token = response.data.token;
           //store token to local storage browser
-          localStorage.setItem(`token-pelanggaran`, token);
+          localStorage.setItem(`token-kasir`, token);
           let dataUser = JSON.stringify(response.data.dataUser);
-          localStorage.setItem(`user-pelanggaran`, dataUser);
+          localStorage.setItem(`user-kasir`, dataUser);
           alert(`Login Berhhasil`);
           window.location.href = `/${response.data.dataUser.role}`;
         } else {

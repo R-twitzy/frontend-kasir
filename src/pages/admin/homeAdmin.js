@@ -1,4 +1,8 @@
 export default function Admin(){
+    if(!localStorage.getItem("token-kasir")){
+        window.location.href ="login"
+    }
+
     return(
         <div className="container-fluid tengah">
             <a href="/admin/user">
